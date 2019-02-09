@@ -6741,10 +6741,10 @@ neo-async@^2.5.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
   integrity sha512-MFh0d/Wa7vkKO3Y3LlacqAEeHK0mckVqzDieUKTT+KGxi+zIpeVsFxymkIiRpbpDziHc290Xr9A1O4Om7otoRA==
 
-next-server@8.0.0-canary.18:
-  version "8.0.0-canary.18"
-  resolved "https://registry.yarnpkg.com/next-server/-/next-server-8.0.0-canary.18.tgz#a97c70f12b3f254e49977e2fac4e55d5d83f82cd"
-  integrity sha512-/GbRm6dOi43XCEb0wM/QuTcubBrEj68z6x6IuwfJ48UD6r+em9aKClUTPys+QEavGtA3Jh6CyM0Ieohe7c6F9g==
+next-server@8.0.0-canary.19:
+  version "8.0.0-canary.19"
+  resolved "https://registry.yarnpkg.com/next-server/-/next-server-8.0.0-canary.19.tgz#c48b2136d36cd0fae6607d765e6c0a8246e91623"
+  integrity sha512-rsA1GGdxT1wAEqEaFl83dwldmHPd5yW5058bpU8Sarou26GPVUrnImYZee0KRJRLkJy7QrkVnBHOjD3QKsrdnA==
   dependencies:
     etag "1.8.1"
     find-up "3.0.0"
@@ -6754,10 +6754,10 @@ next-server@8.0.0-canary.18:
     send "0.16.1"
     url "0.11.0"
 
-next@^8.0.0-canary.18:
-  version "8.0.0-canary.18"
-  resolved "https://registry.yarnpkg.com/next/-/next-8.0.0-canary.18.tgz#82da698f6d62c06a403fd5f5537df3e7da72df2a"
-  integrity sha512-MbQgvORtCmLKS3w4rYLOug9WlrWi6XcwDTSPa/pse2yikYZoXoQo0patpu8QJtcFPqiNBh1KEtjEtmemS7J+Bg==
+next@^8.0.0-canary.19:
+  version "8.0.0-canary.19"
+  resolved "https://registry.yarnpkg.com/next/-/next-8.0.0-canary.19.tgz#53018e93da25bd1c5b2838338a067ed6fed959bd"
+  integrity sha512-ubZf0lBKdqHbijfRErSUt1gbKX8uVcd8/RI7R8ZLDLJ4tCehocBfDJ5ms5DI68j9gjMHmVZ/Z/dQ/bwLBqSIhw==
   dependencies:
     "@babel/core" "7.1.2"
     "@babel/plugin-proposal-class-properties" "7.1.0"
@@ -6770,7 +6770,6 @@ next@^8.0.0-canary.18:
     "@babel/runtime" "7.1.2"
     "@babel/runtime-corejs2" "7.1.2"
     "@babel/template" "7.1.2"
-    acorn "^6.0.5"
     ansi-html "0.0.7"
     arg "3.0.0"
     async-sema "2.1.4"
@@ -6793,7 +6792,7 @@ next@^8.0.0-canary.18:
     loader-utils "1.1.0"
     mkdirp-then "1.2.0"
     nanoid "1.2.1"
-    next-server "8.0.0-canary.18"
+    next-server "8.0.0-canary.19"
     prop-types "15.6.2"
     prop-types-exact "1.2.0"
     react-error-overlay "4.0.0"
@@ -7860,15 +7859,15 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dom@^16.7.0:
-  version "16.7.0"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.7.0.tgz#a17b2a7ca89ee7390bc1ed5eb81783c7461748b8"
-  integrity sha512-D0Ufv1ExCAmF38P2Uh1lwpminZFRXEINJe53zRAbm4KPwSyd6DY/uDoS0Blj9jvPpn1+wivKpZYc8aAAN/nAkg==
+react-dom@^16.8.0:
+  version "16.8.1"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.1.tgz#ec860f98853d09d39bafd3a6f1e12389d283dbb4"
+  integrity sha512-N74IZUrPt6UiDjXaO7UbDDFXeUXnVhZzeRLy/6iqqN1ipfjrhR60Bp5NuBK+rv3GMdqdIuwIl22u1SYwf330bg==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.12.0"
+    scheduler "^0.13.1"
 
 react-error-overlay@4.0.0:
   version "4.0.0"
@@ -7912,15 +7911,15 @@ react-testing-library@^5.2.3:
   dependencies:
     dom-testing-library "^3.13.1"
 
-react@^16.7.0:
-  version "16.7.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.7.0.tgz#b674ec396b0a5715873b350446f7ea0802ab6381"
-  integrity sha512-StCz3QY8lxTb5cl2HJxjwLFOXPIFQp+p+hxQfc8WE0QiLfCtIlKj8/+5tjjKm8uSTlAW+fCPaavGFS06V9Ar3A==
+react@^16.8.0:
+  version "16.8.1"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.8.1.tgz#ae11831f6cb2a05d58603a976afc8a558e852c4a"
+  integrity sha512-wLw5CFGPdo7p/AgteFz7GblI2JPOos0+biSoxf1FPsGxWQZdN/pj6oToJs1crn61DL3Ln7mN86uZ4j74p31ELQ==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.12.0"
+    scheduler "^0.13.1"
 
 read-cmd-shim@^1.0.1:
   version "1.0.1"
@@ -8459,6 +8458,14 @@ scheduler@^0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.12.0.tgz#8ab17699939c0aedc5a196a657743c496538647b"
   integrity sha512-t7MBR28Akcp4Jm+QoR63XgAi9YgCUmgvDHqf5otgAj4QvdoBE4ImCX0ffehefePPG+aitiYHp0g/mW6s4Tp+dw==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+
+scheduler@^0.13.1:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.13.1.tgz#1a217df1bfaabaf4f1b92a9127d5d732d85a9591"
+  integrity sha512-VJKOkiKIN2/6NOoexuypwSrybx13MY7NSy9RNt8wPvZDMRT1CW6qlpF5jXRToXNHz3uWzbm2elNpZfXfGPqP9A==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"

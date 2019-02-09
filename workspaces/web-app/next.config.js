@@ -3,8 +3,8 @@ const webpack = require('webpack')
 
 module.exports = withCSS({
   target: 'serverless',
-  publicRuntimeConfig: {
-    firebasePwd: process.env.FIREBASE_PWD
+  env: {
+    firebasePwd: 'something'
   },
   webpack (config) {
     config.module.rules.push({
