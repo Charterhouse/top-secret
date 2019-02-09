@@ -21,6 +21,7 @@ export default class MyApp extends App {
   }
 
   async componentDidMount () {
+    console.log('process.env.firebasePwd=', process.env.firebasePwd)
     await startFirebase(this.props.pageProps.firebasePwd)
   }
 
