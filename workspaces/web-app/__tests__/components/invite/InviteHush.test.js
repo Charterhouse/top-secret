@@ -52,4 +52,12 @@ describe('InviteHush', () => {
     await waitForElement(() => getByText(/invitation looks/i))
     expect(getByText(/good/i)).toBeInTheDocument()
   })
+
+  it('informs the user that invitation looks good - snapshot', async () => {
+    const { getByText, container } = renderWithHash('#tag.key.nonce')
+    advanceTimersByTime(3000)
+
+    await waitForElement(() => getByText(/invitation looks/i))
+    expect(container.firstChild).toMatchSnapshot()
+  })
 })

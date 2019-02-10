@@ -7904,11 +7904,12 @@ react-test-renderer@^16.6.1:
     react-is "^16.7.0"
     scheduler "^0.12.0"
 
-react-testing-library@^5.2.3:
-  version "5.4.4"
-  resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-5.4.4.tgz#3fa787999492be94b228e4540a7211556bf4fd94"
-  integrity sha512-/TiERZ+URSNhZQfjrUXh0VLsiLSmhqP1WP+2e2wWqWqrRIWpcAxrfuBxzlT75LYMDNmicEikaXJqRDi/pqCEDg==
+react-testing-library@^5.5.4:
+  version "5.5.4"
+  resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-5.5.4.tgz#25321f78c41c7ec882a9e858f0e20d71a66a5338"
+  integrity sha512-uXt1iQMY2kU756KbjsNkWtn+uZy8ZSpCmd8bDJZXavZoczhCUndk1LdBCaR/07tHnbTqc8c0ziEMJiaGxU+Xpw==
   dependencies:
+    "@babel/runtime" "^7.3.1"
     dom-testing-library "^3.13.1"
 
 react@^16.8.0:

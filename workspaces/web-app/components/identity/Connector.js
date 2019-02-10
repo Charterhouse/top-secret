@@ -1,57 +1,45 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Telepath } from '@cogitojs/telepath-js'
 import { CogitoConnector } from '@cogitojs/cogito-react-ui'
 
-class Connector extends React.Component {
-  telepath
-  state = {
-    open: false
+const Connector = ({
+  onDone = () => {},
+  title,
+  disabled
+}) => {
+  const [open, setOpen] = useState(false)
+  const [telepathChannel, setTelepathChannel] = useState(null)
+
+  const getConnectUrl = () => {
+    return telepathChannel.createConnectUrl('https://cogito.mobi')
   }
 
-  constructor () {
-    super()
-    this.telepath = new Telepath('https://telepath.cogito.mobi')
+  const createChannel = async () => {
+    const telepath = new Telepath('https://telepath.cogito.mobi')
+    const telepathChannel = await telepath.createChannel({ appName: 'Hush Hush' })
+    setTelepathChannel(telepathChannel)
   }
 
-  async componentDidMount () {
-    const telepathChannel = await this.telepath.createChannel({ appName: 'Hush Hush' })
-    this.setState({ telepathChannel })
-  }
+  useEffect(() => {
+    createChannel()
+  }, [])
 
-  onOpen = () => {
-    this.setState({ open: true })
-  }
-
-  onDone = () => {
-    this.setState({ open: false })
-    console.log('ready to get your identity from ios app')
-    this.props.onDone && this.props.onDone(this.state.telepathChannel)
-    // dispatch(AccountActions.get(this.props.telepathChannel))
-  }
-
-  onCancel = dispatch => {
-    this.setState({ open: false })
-  }
-
-  getConnectUrl = () => {
-    return this.state.telepathChannel.createConnectUrl('https://cogito.mobi')
-  }
-
-  render () {
-    if (!this.state.telepathChannel) return null
-    return (
-      <div css={{ alignSelf: 'center' }}>
-        <CogitoConnector open={this.state.open}
-          buttonText={this.props.title}
-          buttonDisabled={this.props.disabled}
-          buttonStyling={{ primary: true }}
-          connectUrl={this.getConnectUrl()}
-          onOpen={this.onOpen}
-          onDone={this.onDone}
-          onCancel={this.onCancel} />
-      </div>
-    )
-  }
+  if (!telepathChannel) return null
+  return (
+    <div css={{ alignSelf: 'center' }}>
+      <CogitoConnector open={open}
+        buttonText={title}
+        buttonDisabled={disabled}
+        buttonStyling={{ primary: true }}
+        connectUrl={getConnectUrl()}
+        onOpen={() => setOpen(true)}
+        onDone={() => {
+          setOpen(false)
+          onDone(telepathChannel)
+        }}
+        onCancel={() => setOpen(false)} />
+    </div>
+  )
 }
 
 export { Connector }
