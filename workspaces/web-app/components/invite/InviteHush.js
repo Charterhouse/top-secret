@@ -1,31 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { NoInvitation } from './NoInvitiation'
 import { ProcessInvitation } from './ProcessInvitation'
 
-class InviteHush extends React.Component {
-  state = {
-    invitationOk: false
-  }
+const InviteHush = () => {
+  const [invitationOk, setInvitationOk] = useState(false)
+  const [invitation, setInvitation] = useState(null)
 
-  componentDidMount () {
+  useEffect(() => {
     if (window.location.hash) {
       const invitation = window.location.hash.substring(1)
       console.log(invitation)
-      this.setState({ invitation, invitationOk: true })
+      setInvitationOk(true)
+      setInvitation(invitation)
     }
-  }
+  })
 
-  render () {
-    if (!this.state.invitationOk) {
-      return (
-        <NoInvitation />
-      )
-    }
+  if (!invitationOk) {
     return (
-      <ProcessInvitation invitation={this.state.invitation} />
+      <NoInvitation />
     )
   }
+
+  return (
+    <ProcessInvitation invitation={invitation} />
+  )
 }
 
 export { InviteHush }
