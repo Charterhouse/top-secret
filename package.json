@@ -39,9 +39,7 @@
       "**/es/**"
     ],
     "globals": [
-      "firebase",
-      "useState",
-      "useEffect"
+      "firebase"
     ],
     "envs": [
       "es6",
