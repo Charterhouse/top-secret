@@ -12,14 +12,6 @@ describe('InviteHush', () => {
     console.log.mockRestore()
   })
 
-  const runOnlyPendingTimers = () => {
-    Promise.resolve().then(() => jest.runOnlyPendingTimers())
-  }
-
-  const advanceTimersByTime = time => {
-    Promise.resolve().then(() => jest.advanceTimersByTime(time))
-  }
-
   const renderWithHash = (hash = '') => {
     window.location.hash = hash
     return render(<InviteHush />)
@@ -33,21 +25,19 @@ describe('InviteHush', () => {
 
   it('display error message if invitation hash does not include key component', async () => {
     const { getByText } = renderWithHash('#tag')
-    runOnlyPendingTimers()
 
     await waitForElement(() => getByText(/missing symmetric key component in the invitation/i))
   })
 
   it('display error message if invitation hash does not include nonce component', async () => {
     const { getByText } = renderWithHash('#tag.key')
-    runOnlyPendingTimers()
 
     await waitForElement(() => getByText(/missing nonce component in the invitation/i))
   })
 
   it('informs the user that invitation looks good if the invitation hash includes all required components', async () => {
     const { getByText } = renderWithHash('#tag.key.nonce')
-    advanceTimersByTime(3000)
+    jest.advanceTimersByTime(3000)
 
     await waitForElement(() => getByText(/invitation looks/i))
     expect(getByText(/good/i)).toBeInTheDocument()
@@ -55,7 +45,7 @@ describe('InviteHush', () => {
 
   it('informs the user that invitation looks good - snapshot', async () => {
     const { getByText, container } = renderWithHash('#tag.key.nonce')
-    advanceTimersByTime(3000)
+    jest.advanceTimersByTime(3000)
 
     await waitForElement(() => getByText(/invitation looks/i))
     expect(container.firstChild).toMatchSnapshot()
