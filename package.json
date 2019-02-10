@@ -28,7 +28,8 @@
     "test:watch": "yarn jest --watch --colors",
     "lint": "yarn standard",
     "lint:fix": "yarn standard --fix --verbose",
-    "build": "yarn lerna run build"
+    "build": "yarn lerna run build",
+    "deploy:web-app": "(cp yarn.lock workspaces/web-app/ && ((now && rm workspaces/web-app/yarn.lock) || rm workspaces/web-app/yarn.lock))"
   },
   "standard": {
     "parser": "babel-eslint",

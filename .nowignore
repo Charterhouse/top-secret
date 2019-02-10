@@ -9,3 +9,4 @@ workspaces/web-app/*.*
 !workspaces/web-app/babel.config.js
 !workspaces/web-app/package.json
 !workspaces/web-app/next.config.js
+!workspaces/web-app/yarn.lock
