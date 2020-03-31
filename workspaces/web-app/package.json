@@ -17,7 +17,7 @@
     "@emotion/styled": "^10.0.1",
     "@react-frontend-developer/buffers": "^1.0.17",
     "@react-frontend-developer/react-layout-helpers": "^1.0.17",
-    "next": "^8.0.0-canary.19",
+    "next": "^9.3.2",
     "prop-types": "^15.6.2",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
